@@ -48,7 +48,6 @@ isNumXsEqualOs = (words) =>
 isNumXsEqualOs("oooooxxxxx");
 
 // **12. isPrime?**
-
 isPrime = (n) => {
     for (var i = 2; i < n; i++) if (n % i === 0) return false;
     return n > 1;
@@ -57,11 +56,15 @@ console.log(isPrime(9));
 
 // **13. Validate Email.**
 function isValidEmail(email) {
-    let isFiltered = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if (email.match(isFiltered)) { return "Valid" } else{return "Invalid"}
+    let isFiltered = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (email.match(isFiltered)) {
+        return "Valid";
+    } else {
+        return "Invalid";
+    }
 }
 console.log(isValidEmail("j@example.com"));
-console.log(isValidEmail("@example.com"))
+console.log(isValidEmail("@example.com"));
 console.log(isValidEmail("john.smith@com"));
 console.log(isValidEmail("john.smith@email.com"));
 console.log(isValidEmail("john..smith@email.com"));
